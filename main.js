@@ -35,6 +35,7 @@ function addData(data) {
     div.classList.add("container-item");
     // adding the data to your HTML tags
     imgIcono.src = element.icon;
+    imgIcono.alt = 'icon'
     spanCategory.textContent = element.category;
     spanScore.textContent = element.score;
     spanOf.textContent = " / 100";
