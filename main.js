@@ -47,19 +47,22 @@ function addData(data) {
     divScoreOf.appendChild(spanScore);
     divScoreOf.appendChild(spanOf);
     // applying styles depending on your category
-    if (spanCategory.textContent == "Reaction") {
-      spanCategory.style.color = "var(--Light-red)";
-      div.style.backgroundColor = "var(--Light-red-trans)";
-    } else if (spanCategory.textContent == "Memory") {
-      spanCategory.style.color = "var(--Orangey-yellow)";
-      div.style.backgroundColor = "var(--Orangey-yellow-trans)";
-    } else if (spanCategory.textContent == "Verbal") {
-      spanCategory.style.color = "var(--Green-teal)";
-      div.style.backgroundColor = "var(--Green-teal-trans)";
-    } else if (spanCategory.textContent == "Visual") {
-      spanCategory.style.color = "var(--Cobalt-blue)";
-      div.style.backgroundColor = "var(--Cobalt-blue-trans)";
-    }
+
+    const category = spanCategory.textContent;
+
+    spanCategory.style.color =
+    category === "Reaction" ? "var(--Light-red)" :
+    category === "Memory" ? "var(--Orangey-yellow)" :
+    category === "Verbal" ? "var(--Green-teal)" :
+    category === "Visual" ? "var(--Cobalt-blue)" :
+    "var(--Default-color)"; 
+
+    div.style.backgroundColor =
+    category === "Reaction" ? "var(--Light-red-trans)" :
+    category === "Memory" ? "var(--Orangey-yellow-trans)" :
+    category === "Verbal" ? "var(--Green-teal-trans)" :
+    category === "Visual" ? "var(--Cobalt-blue-trans)" :
+    "var(--Default-trans)"; 
     // adding the elements to their section
     div.appendChild(divIconCategory);
     div.appendChild(divScoreOf);

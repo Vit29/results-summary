@@ -38,12 +38,15 @@ body {
   --Pale-blue: hsl(221, 100%, 96%);
   --Light-lavender: hsl(241, 100%, 89%);
   --Dark-gray-blue: hsl(224, 30%, 27%);
+
+  --Default-color: rgb(22, 21, 21);
+  --Default-trans: rgba(128, 128, 128, 0.178);
 }
 
 .container-Results-summary {
   max-width: 600px;
   border-radius: 20px;
-  margin: 0 10px;
+  margin: 0 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
